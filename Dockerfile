@@ -6,7 +6,7 @@ ENV GF_INSTALL_PLUGINS ""
 
 # Installing packages
 RUN apk add --no-cache su-exec ca-certificates openssl
-RUN apk add --no-cache --virtual .build-deps fontconfig bash
+RUN apk add --no-cache --virtual .build-deps fontconfig
 
 # Work path
 WORKDIR /scripts

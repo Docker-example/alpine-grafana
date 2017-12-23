@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/sh
 set -e
 
 if [ ! -z ${GF_INSTALL_PLUGINS} ]; then

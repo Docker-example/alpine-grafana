@@ -3,7 +3,7 @@
 ## Versions
 
 Alpine : `3.7`   
-Grafana : `4.6.3`   
+Grafana : `5.0.2` (ok for 4.X.X)
 
 ## Commands
 

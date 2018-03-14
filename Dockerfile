@@ -1,7 +1,13 @@
 FROM alpine:3.7
 
-ENV GRAFANA_VERSION 4.6.3
-ENV GLIBC_VERSION 2.26-r0
+LABEL MAINTAINER="Aurelien PERRIER <a.perrier89@gmail.com>"
+LABEL APP="grafana"
+LABEL APP_REPOSITORY="https://github.com/grafana/grafana/releases"
+
+ENV TIMEZONE Europe/Paris
+
+ENV GRAFANA_VERSION 5.0.2
+ENV GLIBC_VERSION 2.27-r0
 ENV GF_INSTALL_PLUGINS ""
 
 # Installing packages
@@ -24,7 +30,7 @@ RUN rm /etc/apk/keys/sgerrand.rsa.pub glibc-${GLIBC_VERSION}.apk
 # Coping config & scripts
 COPY ./scripts/start.sh start.sh
 
-RUN  tar -C . -xzf grafana-$GRAFANA_VERSION.linux-x64.tar.gz && \
+RUN tar -C . -xzf grafana-$GRAFANA_VERSION.linux-x64.tar.gz && \
         mv grafana-${GRAFANA_VERSION} /grafana && \
         mkdir -p /var/lib/grafana/dashboards /var/lib/grafana/data /var/lib/grafana/logs /var/lib/grafana/plugins && \
         ln -s /grafana/plugins /var/lib/grafana/plugins && \

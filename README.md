@@ -1,9 +1,9 @@
-# Grafana [![Build Status](https://drone.aurelienperrier.com/api/badges/Docker-example/alpine-grafana/status.svg?branch=master)](https://drone.aurelienperrier.com/Docker-example/alpine-grafana)
+# Grafana
 
 ## Versions
 
 Alpine : `3.7`   
-Grafana : `5.0.2` (ok for 4.X.X)
+Grafana : `5.0.4` (ok for 4.X.X)
 
 ## Commands
 
